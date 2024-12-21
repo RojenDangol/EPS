@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('phone')->unique();
             $table->string('event_type');
             $table->string('event_date');
-            $table->binary('qr_code')->nullable()->change();
+            $table->binary('qr_code')->nullable();
             // $table->unsignedBigInteger('user_id');
             
             // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

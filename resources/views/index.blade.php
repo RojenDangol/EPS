@@ -67,16 +67,16 @@
         <div class="col-12 col-md-6 mb-3">
             <div class="card text-white bg-primary">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Photos</h5>
-                    <p class="card-text display-4">{{ $folders->sum(fn($folder) => $folder->images->count()) }}</p>
+                    <h5 class="card-title">Total Event Bookings</h5>
+                    <p class="card-text display-4">{{$events_booked}}</p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6 mb-3">
             <div class="card text-white bg-success">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Folders</h5>
-                    <p class="card-text display-4">{{ $folders->count() }}</p>
+                    <h5 class="card-title">Total Photo Contributors</h5>
+                    <p class="card-text display-4">{{$photo_contributor}}</p>
                 </div>
             </div>
         </div>

@@ -273,15 +273,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    @guest                       
                     <li class="nav-item">
-                        <a class="nav-link active" href="home.html">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{route('admin.index')}}">Home</a>
+                    </li>
+                    @endguest
                     @guest                       
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('login')}}">Login</a>
@@ -306,5 +312,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    @stack('scripts')
 </body>
 </html>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Folder;
+use App\Models\EventBooking;
+use App\Models\GuestUploads;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,8 +12,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $folders = Folder::with('images')->get();
-        return view('index',compact('folders'));
+        $events_booked = EventBooking::count();
+        $photo_contributor = GuestUploads::count();
+        return view('index',compact('events_booked','photo_contributor'));
     }
 
     public function store(Request $request)
