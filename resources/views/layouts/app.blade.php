@@ -40,9 +40,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        .center-text{
-            text-align: center;
-        }
 
         .main-content {
             flex: 1;
@@ -50,16 +47,50 @@
         }
 
         .header-title {
-            font-size: 28px;
+            font-size: 2rem;
             font-weight: bold;
             text-align: center;
             margin-bottom: 15px;
         }
 
         .header-subtitle {
-            font-size: 16px;
+            font-size: 1.2rem;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        /* Carousel styles */
+        .carousel-container {
+            position: relative;
+            background: linear-gradient(135deg, rgba(110, 59, 110, 0.1), rgba(110, 59, 110, 0.2)); /* Gradient background */
+            border-radius: 10px; /* Rounded corners for the section */
+            padding: 20px; /* Padding around the carousel */
+            max-width: 80%; /* Restrict width for better appearance */
+            margin: auto; /* Center align */
+        }
+
+        .carousel-inner img {
+            object-fit: cover;
+            width: 100%;
+            height: 560px;
+            border-radius: 8px; /* Rounded corners for images */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-inner img {
+                height: 200px;
+            }
+
+            .carousel-container {
+                padding: 10px;
+                max-width: 100%;
+            }
         }
 
         .btn-custom {
@@ -81,34 +112,162 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        @media (max-width: 768px) {
-            .carousel-item img {
-                max-height: 300px;
-                object-fit: cover;
-            }
+        .center-text {
+            text-align: center;
+            margin-top: 40px;
         }
+
+        .step-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 30%;
+        }
+
         .step-icon {
-        font-size: 40px;
-        color: #8b458b;
-        margin-right: 15px;
-        flex-shrink: 0; /* Prevent the icon from shrinking on smaller screens */
+            font-size: 40px;
+            color: #8b458b;
+            margin-bottom: 10px;
+        }
+
+        .step-content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .step-content p {
+            margin: 0;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            .step {
+            .step-container {
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
+            }
+
+            .step {
+                width: 100%;
             }
 
             .step-icon {
-                margin: 0 0 10px 0; /* Adjust margins for vertical layout */
+                margin-bottom: 10px;
             }
         }
-        body {
-            background: linear-gradient(135deg, #f8eaf7, #e0c3fc);
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #f8eaf7;
+            color: #6e3b6e;
+            padding: 20px;
+            border-top: 3px solid #e0c3fc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .contact-column {
+            flex: 1 1 250px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center; 
+        }
+
+        .contact-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #6e3b6e;
+        }
+
+        .contact-column p, .contact-column a {
+            font-size: 0.9rem;
+            margin: 3px 0;
+            color: #6e3b6e;
+            text-decoration: none;
+        }
+
+        .contact-column a:hover {
+            color: #8b458b;
+        }
+
+        iframe {
+            width: 100%;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8eaf7;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #6e3b6e;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            color: #6e3b6e;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #e0c3fc;
+            padding: 10px 0;
+            color: #6e3b6e;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #f8eaf7, #e0c3fc); /* Match login page */
+            color: #6e3b6e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
             font-family: 'Poppins', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        }
+
+        .footer-center {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-column {
+                flex: 1 1 100%;
+                margin-bottom: 15px;
+            }
+
+            iframe {
+                height: 200px;
+            }
         }
 
         .container {
@@ -306,7 +465,7 @@
     </nav>
     @yield('content')
     <footer>
-        <div class="container">
+        <div class="footer-center">
             <p>&copy; 2024 MyApp. All rights reserved.</p>
             
         </div>
