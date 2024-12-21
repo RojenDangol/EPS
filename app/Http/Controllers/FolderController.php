@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Folder;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class FolderController extends Controller
 {
-
     public function index()
     {
         $folders = Folder::with('images')->get();
-        return view('index',compact('folders'));
+        return view('dashboard', compact('folders'));
     }
 
     public function store(Request $request)

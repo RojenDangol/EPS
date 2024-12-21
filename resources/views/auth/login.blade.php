@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.loginDirect')
 @push('scripts')
 <style>
     body {
@@ -97,7 +97,7 @@
   </style>  
 @endpush
 
-@section('content')
+@section('loginDirect')
 <div class="login-container">
     <h1>Welcome!</h1>
     <form method="POST" action="{{ route('login') }}">
@@ -141,11 +141,11 @@
             {{ __('Login') }}
         </button>
 
-        @if (Route::has('password.request'))
+        {{-- @if (Route::has('password.request'))
             <a class="btn btn-link" href="{{ route('password.request') }}">
                 {{ __('Forgot Your Password?') }}
             </a>
-        @endif
+        @endif --}}
     </form>
 </div>
 {{-- <div class="container">
