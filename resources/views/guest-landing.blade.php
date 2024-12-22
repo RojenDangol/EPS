@@ -127,7 +127,7 @@
             </div>
             <!-- File Upload -->
             <div class="mb-3">
-                <label for="photos" class="form-label">Upload Photos <small>(Exactly 10 photos required)</small></label>
+                <label for="photos" class="form-label">Upload Photos <small>(Best photos)</small></label>
                 <label for="photos" class="custom-file-upload">
                     <img src="https://via.placeholder.com/50" alt="Upload Icon" style="margin-bottom: 10px;">
                     <br>Click to upload your <br>10 best shots! 😍

@@ -7,8 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    {{-- <title>{{ config('app.name', 'EPS') }}</title> --}}
+    <title>EPS</title>
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -21,7 +22,15 @@
             background: linear-gradient(135deg, #f8eaf7, #e0c3fc); /* Match login page background */
         }
         .navbar-brand img {
-            max-height: 40px; /* Responsive logo size */
+            max-height: 60px;
+            transition:max-height:0.3s ease;
+            margin-left:20%; /* Responsive logo size */
+        }
+        @media(min-width:1024px){
+            .navbar-brand img{
+                max-height:80px;
+                margin-left:50%;
+            }
         }
         .navbar-nav .nav-link {
             color: #6e3b6e !important; /* Match login page text color */
@@ -51,6 +60,11 @@
             font-weight: bold;
             text-align: center;
             margin-bottom: 15px;
+        }
+        @media(min-width:1024px){
+            .header-title{
+                font-size: 4rem;
+            }
         }
 
         .header-subtitle {
@@ -215,7 +229,8 @@
             background-color: #f8eaf7;
             margin-top: 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px
+            rgba(0, 0, 0, 0.1);
         }
 
         .about-section h2 {

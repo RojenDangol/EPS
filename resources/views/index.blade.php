@@ -212,6 +212,7 @@
             <label for="event_date">Event Date</label>
             <input type="date" id="event_date" name="event_date" required>
         </div>
+        
 
         <!-- Submit Button -->
         <button type="submit" class="btn-submit">Book Event</button>
@@ -219,3 +220,11 @@
 </div>
 @endguest
 @endsection
+@push('scripts')
+<script>
+    // Set min date to today's date
+    const eventDateInput = document.getElementById('event_date');
+    const today = new Date().toISOString().split('T')[0];
+    eventDateInput.setAttribute('min', today);
+</script>
+@endpush
